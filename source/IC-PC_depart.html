@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>부서</title>
+	<link href="departStyle.css" rel="stylesheet" type="text/css">
+	<link href="commonStyle.css" rel="stylesheet" type="text/css">
+    <!--font 스타일-->
+    <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		//오디오
+		var audio = new Audio('BGM.mp3');
+		audio.autoplay = true;
+		//section intro 마우스오버
+        $(document).ready(function() { 
+            var xOffset = 10;
+            var yOffset = 30;
+///////////임원단/////////////////////////////////////////////////////////////////////
+            $(document).on("mouseover",".textOver1",function(e){ //마우스 오버시
+                //보여줄 이미지 선언 
+                $("body").append("<p id='preview'><img src='임원단.jpg'"+ $(this).attr("src") +"' width='350px' height='400'/></p>");  
+                $("#preview") //미리보기 화면 설정 셋팅
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px")
+                    .fadeIn("fast");
+            });
+            $(document).on("mousemove",".textOver1",function(e){ //마우스 이동시
+                $("#preview")
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px");
+            });
+            $(document).on("mouseout",".textOver1",function(){ //마우스 아웃시
+                $("#preview").remove();	
+            });
+///////////찬양팀/////////////////////////////////////////////////////////////////////
+            $(document).on("mouseover",".textOver2",function(e){ //마우스 오버시
+                //보여줄 이미지 선언 
+                $("body").append("<p id='preview'><img src='찬양팀.jpg'"+ $(this).attr("src") +"' width='350px' height='400'/></p>");  
+                $("#preview") //미리보기 화면 설정 셋팅
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px")
+                    .fadeIn("fast");
+            });
+            $(document).on("mousemove",".textOver2",function(e){ //마우스 이동시
+                $("#preview")
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px");
+            });
+            $(document).on("mouseout",".textOver2",function(){ //마우스 아웃시
+                $("#preview").remove();	
+            });
+///////////새가족팀/////////////////////////////////////////////////////////////////////
+            $(document).on("mouseover",".textOver3",function(e){ //마우스 오버시
+                //보여줄 이미지 선언 
+                $("body").append("<p id='preview'><img src='새가족팀.jpg'"+ $(this).attr("src") +"' width='350px' height='400'/></p>");  
+                $("#preview") //미리보기 화면 설정 셋팅
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px")
+                    .fadeIn("fast");
+            });
+            $(document).on("mousemove",".textOver3",function(e){ //마우스 이동시
+                $("#preview")
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px");
+            });
+            $(document).on("mouseout",".textOver3",function(){ //마우스 아웃시
+                $("#preview").remove();	
+            });
+///////////행사기획팀/////////////////////////////////////////////////////////////////////
+            $(document).on("mouseover",".textOver4",function(e){ //마우스 오버시
+                //보여줄 이미지 선언 
+                $("body").append("<p id='preview'><img src='행사기획팀.jpg'"+ $(this).attr("src") +"' width='350px' height='400'/></p>");  
+                $("#preview") //미리보기 화면 설정 셋팅
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px")
+                    .fadeIn("fast");
+            });
+            $(document).on("mousemove",".textOver4",function(e){ //마우스 이동시
+                $("#preview")
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px");
+            });
+            $(document).on("mouseout",".textOver4",function(){ //마우스 아웃시
+                $("#preview").remove();	
+            });
+///////////전도팀/////////////////////////////////////////////////////////////////////
+            $(document).on("mouseover",".textOver5",function(e){ //마우스 오버시
+                //보여줄 이미지 선언 
+                $("body").append("<p id='preview'><img src='전도팀.jpg'"+ $(this).attr("src") +"' width='350px' height='400'/></p>");  
+                $("#preview") //미리보기 화면 설정 셋팅
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px")
+                    .fadeIn("fast");
+            });
+            $(document).on("mousemove",".textOver5",function(e){ //마우스 이동시
+                $("#preview")
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px");
+            });
+            $(document).on("mouseout",".textOver5",function(){ //마우스 아웃시
+                $("#preview").remove();	
+            });
+///////////영상팀/////////////////////////////////////////////////////////////////////
+            $(document).on("mouseover",".textOver6",function(e){ //마우스 오버시
+                //보여줄 이미지 선언 
+                $("body").append("<p id='preview'><img src='영상팀.jpg'"+ $(this).attr("src") +"' width='350px' height='400'/></p>");  
+                $("#preview") //미리보기 화면 설정 셋팅
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px")
+                    .fadeIn("fast");
+            });
+            $(document).on("mousemove",".textOver6",function(e){ //마우스 이동시
+                $("#preview")
+                    .css("top",(e.pageY - xOffset) + "px")
+                    .css("left",(e.pageX + yOffset) + "px");
+            });
+            $(document).on("mouseout",".textOver6",function(){ //마우스 아웃시
+                $("#preview").remove();	
+            });
+        });
+	</script>
+</head>
+<body>
+	<div id= "wrapper">
+		<header>  
+			<nav class="nav1">
+                <ul id="logo">
+                    <li><a href="IC-PC.html"><img src="logo.jpg" height="120" width="230"></a></li>
+                </ul>
+				<ul>
+					<!--자바스크립트 오디오-->
+					<div class="ccm">
+						<li><label>ccm player</label>
+						<li><button onclick="audio.play()" style="cursor: pointer;">PLAY</button></li>
+						<li><button onclick="audio.pause()" style="cursor: pointer;">PAUSE</button></li>
+					</div>
+					<li>Home</li>
+					<li>join</li>
+					<li>English</li>
+				</ul>
+			</nav>
+			<br>
+			<br>
+			<br>
+			<nav class="nav2">
+				<ul>
+                    <li><a href="icpc.html">IC-PC</a></li>
+                    <li><a href="IC-PC_depart.html">부서</a></li>
+                    <li><a href="IC-PC_Christianity.html">기독교란?</a></li>
+                    <li><a href="IC-PC_News.html">선교부소식</a></li>
+                    <li><a href="IC-PC_notice.html">공지사항</a></li>
+			    </ul>
+			</nav>
+		</header>
+		<section>
+			<aside class="side">
+				<ul>
+					<li><a href="#intro2"><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">임원단</font></a></li>
+					<li><a href="#intro3"><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">찬양팀</font></a></li>
+					<li><a href="#intro4"><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">새가족팀</font></a></li>
+					<li><a href="#intro5"><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">행사기획팀</font></a></li>
+					<li><a href="#intro6"><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">전도팀</font></a></li>
+					<li><a href="#intro7"><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">영상팀</font></a></li>
+					<li><a href="#intro1"><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">선교부 구조</font></a></li>
+				</ul>
+			</aside>
+			<article class="depart_intro">
+				<ul>
+					<li id="intro2">
+						<!--<div id="changeImg" onclick="change()">-->
+						<div class="textOver1">◎ 임원단<span>[마우스오버]</span></div>
+						<article class="content">임원단은 IC-PC를 이끌어며 선교부원, 대외, 교목실 등과 소통하며 IC-PC가 복음에 다하고 단체를 즐겁게 이끌어가는 팀이다.</article>
+					</li>
+					<li id="intro3">
+						<div class="textOver2">◎ 찬양팀<span>[마우스오버]</span></div>
+						<article class="content">채플 시간에 찬양을 인도하고 찬양을 통해 복음을 전하기 위해 앞장서는 팀이다.</article>
+					</li>
+					<li id="intro4">
+						<div class="textOver3">◎ 새가족팀<span>[마우스오버]</span></div>
+						<article class="content">새친구(복학생, 신입생 등)적응을 도와주고 선교부원들의 화합을 이뤄내는 팀이다.</article>
+					</li>
+					<li id="intro5">
+						<div class="textOver4">◎ 행사기획팀<span>[마우스오버]</span></div>
+						<article class="content">선교부의 행사를 기획하고 이끌어가는 팀.</article>
+					</li>
+					<li id="intro6">
+						<div class="textOver5">◎ 전도팀<span>[마우스오버]</span></div>
+						<article class="content">찬양 버스킹, 전도 기획, 전도 활동 주체, 행사에 신앙 관련 부분을 맡고 있으며 선교부의 QT 등 복음을 전하는 팀이다.</article>
+					</li>
+					<li id="intro7">
+						<div class="textOver6">◎ 영상팀<span>[마우스오버]</span></div>
+						<article class="content">영상 제작 및 기획, 영상을 통한 홍보 및 선교부 활동 공유 등 IC-PT의 활동을 담아내는 팀이다.</article>
+					</li>
+					<li id="intro1"><img src="구조도.jpg" alt="선교부 구조도"></li>
+				</ul>
+			</article>
+		</section">
+		<footer>
+			<ul>
+				<li>Copyright 2018 SH-YK</li>
+				<li>본부동 714-1호</li>
+				<li>문의전화 : 박성진 010-3290-1913</li>
+			</ul>
+		</footer>
+	</div>
+</body>
+</html>	
+

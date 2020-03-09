@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <title>공지사항</title>
+    <link href="noticeStyle.css" rel="stylesheet" type="text/css">
+    <link href="commonStyle.css" rel="stylesheet" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        //오디오
+        var audio = new Audio('BGM.mp3');
+        audio.autoplay = true;
+        //메뉴 접었다 펼치기
+        var elements = document.getElementsByTagName("div");
+        // 상태에 따라 접거나 펼치기
+        function switchDisplay() {
+            var parent = this.parentNode;
+            var target = parent.getElementsByTagName("div")[1];
+            if (target.style.display == "none") {
+                target.style.display="block";
+            }
+            else {
+                target.style.display="none";
+            }
+            return false;
+        }
+        //파업으로 홈페이지 오픈하기
+        function popupOpen1(){
+            var popUrl = "http://www.bu.ac.kr";   //팝업창에 출력될 페이지 URL
+            var popOption = "width=800, height=800, toolbar=no, resizable=no, scrollbars=no, status=no;";    //팝업창 옵션(optoin)
+            window.open(popUrl,"",popOption);
+        }
+        function popupOpen2(){
+            var popUrl = "https://www.facebook.com/groups/175237402615763/?ref=bookmarks";
+            var popOption = "width=800, height=800, toolbar=no, resizable=no, scrollbars=no, status=no;";
+            window.open(popUrl,"",popOption);
+        }
+        //경고 메세지 막스 띄우기
+        function testAlertBox() {
+            alert('개설 중 입니다.');
+        }
+    </script>
+</head>
+<body>
+    <div id= "wrapper">
+        <header>  
+            <nav class="nav1">
+                <ul id="logo">
+                    <li><a href="IC-PC.html"><img src="logo.jpg" height="120" width="230"></a></li>
+                </ul>
+                <ul>
+                    <!--자바스크립트 오디오-->
+                    <div class="ccm">
+                        <li><label>ccm player</label>
+                        <li><button onclick="audio.play()" style="cursor: pointer;">PLAY</button></li>
+                        <li><button onclick="audio.pause()" style="cursor: pointer;">PAUSE</button></li>
+                    </div>
+                    <li>Home</li>
+                    <li>join</li>
+                    <li>English</li>
+                </ul>
+            </nav>
+            <br>
+            <br>
+            <br>
+            <nav class="nav2">
+                <ul>
+                    <li><a href="icpc.html">IC-PC</a></li>
+                    <li><a href="IC-PC_depart.html">부서</a></li>
+                    <li><a href="IC-PC_Christianity.html">기독교란?</a></li>
+                    <li><a href="IC-PC_News.html">선교부소식</a></li>
+                    <li><a href="IC-PC_notice.html">공지사항</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <aside class="side">
+                <ul>
+                    <div>
+                        <div id="sideTap1" class="label">
+                            <p><img src="aside_notice.png" height="20" width="20">교목실 공지사항</p>
+                        </div>
+                        <div id="sideTap1_2" class="elements">
+                            <li><a href="#intro1"><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">교목실 업무</font></a></li>
+                            <li><a href="#intro1"><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">교목실 행사</font></a></li>
+                            <li><a href="#intro1"><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">자료실</font></a></li>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <div id="sideTap2" class="label">
+                            <p><img src="aside_notice.png" height="20" width="20">선교부 공지사항</p>
+                        </div>
+                        <div id="sideTap2_2" class="elements">
+                            <li><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">정기모임</font></li>
+                            <li><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">선교부 행사</font></li>
+                            <li><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">선교부 업무</font></li>
+                            <li><font color="black" onmouseover="this.style.color='#0000ff'" onmouseout="this.style.color='black'">자료실</font></li>
+                        </div>
+                    </div>
+                    <div>
+                        <ul>
+                        <div id="sideTap3" class="label">
+                            <p><img src="aside_notice.png" height="20" width="20">항상 소통하기</p>
+                        </div>
+                        <div id="sideTop3_2" class="elements">
+                            <br>
+                            <li><a href="javascript:popupOpen1();"><img src="백석대학교.png" height="40" width="40"></a></li>
+                            <li><a href="javascript:popupOpen2()"><img src="페이스북.png" height="40" width="40"></a></li>
+                            <li><img src="인스타그램.png" height="40" width="40" onclick="testAlertBox()"></a></li>
+                        </div>
+                        </ul>
+                    </div>
+                    <hr>
+                </ul>
+            </aside>
+            <article class="notice">
+                <ul>
+                    <li id="notice1">
+                        <div><img src="십자가.png" height="17" width="15">교목실 공지사항</div>
+                    </li>
+                    <li id="notice_table1">
+                        <article class="content">
+                            <table class="table">
+                                <tr class="notice_table_tr">
+                                    <th class="th_1">번호</th>
+                                    <th class="th_2">제목</th>
+                                    <th class="th_3">글쓴이</th>
+                                    <th class="th_4">날짜</th>
+                                    <th class="th_5">조회</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>채플 출석 마감</td>
+                                    <td>교목실</td>
+                                    <td>2018-06-15.(금)</td>
+                                    <td>286</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>국가근로장학생 모집</td>
+                                    <td>교목실</td>
+                                    <td>2018-06-15.(금)</td>
+                                    <td>123</td>
+                                </tr>
+                            </table>
+                        </article>
+                    </li>
+                    <li id="notice2">
+                        <div><img src="십자가.png" height="17" width="15">선교부 공지사항</div>
+                        <article class="content"></article>
+                    </li>
+                    <li id="notice_table2">
+                        <article class="content">
+                            <table class="table">
+                                <tr class="notice_table_tr">
+                                    <th class="th_1">번호</th>
+                                    <th class="th_2">제목</th>
+                                    <th class="th_3">글쓴이</th>
+                                    <th class="th_4">날짜</th>
+                                    <th class="th_5">조회</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>CCM Festival 최종 연습</td>
+                                    <td>박성진</td>
+                                    <td>2018-05-16.(수)</td>
+                                    <td>38</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>선교부 총회</td>
+                                    <td>박성진</td>
+                                    <td>2018-05-28.(월)</td>
+                                    <td>51</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>선교부 종강 MT</td>
+                                    <td>박성진</td>
+                                    <td>2018-06-4.(월)</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2학기 찬양팀 모집</td>
+                                    <td>이상호</td>
+                                    <td>2018-06-15.(금)</td>
+                                    <td>42</td>
+                                </tr>
+                            </table>
+                        </article>
+                    </li>
+                    <li id="notice3">
+                        <div><img src="십자가.png" height="17" width="15">정기 공지사항</div>
+                            <article id="content">
+                                05.07(월) - 선교부 체육대회<br>
+                                05.17(목) - CCM Festival<br>
+                                05.15(화) - 전도축제<br>
+                                05.16(수) - 세례식<br>
+                                05.17(목) - CCM Festival<br>
+                                05.31(목) - 선교부 총회<br>
+                                06.21(목) - 선교부 종강 MT
+                            </article>
+                    </li>
+                    <li id="notice4">
+                        <div><img src="십자가.png" height="17" width="15">홍보영상</div>
+                        <article id="content">
+                            <video width="400" height="200" controls><source src="홍보영상.mp4" type="video/mp4"></video>
+                        </article>
+                    </li>
+                </ul>
+            </article>
+        </section">
+        <footer>
+            <ul>
+                <li>Copyright 2018 SH-YK</li>
+                <li>본부동 714-1호</li>
+                <li>문의전화 : 박성진 010-3290-1913</li>
+            </ul>
+        </footer>
+    </div>
+    <script>
+        // 모든 영역 접기
+        for (var i = 0; i < elements.length; i++) {
+            if (elements[i].className == "elements") {
+                elements[i].style.display="none";
+            }
+            else if (elements[i].className == "label") {
+                elements[i].onclick=switchDisplay;
+            }
+        }
+    </script>
+</body>
+</html> 

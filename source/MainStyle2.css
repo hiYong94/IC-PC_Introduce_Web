@@ -1,0 +1,90 @@
+
+		/*slide 구현*/
+			.slidemain ul,ol,dl{
+				list-style:none;
+			}
+			.slidemain img , .slidemain video{
+				max-width:100%; border:0;
+			}
+			.slidemain a{
+				text-decoration:none;
+				color:#333;
+				display:inline-block;
+			}
+			.slidemain table{
+				border-collapse:collapse;
+				border-spacing:0;
+			}
+				vertical-align:middle;
+			.slidemain input , select{
+			}
+			.slidemain html{
+				height:100%;
+			}
+			.slidemain label{
+				cursor:pointer;
+			}
+		/*슬라이드 몸통 */
+		.slide{background:gray;
+			text-align:center; position:relative;
+			width: 1000px;
+			height: 600px;
+			margin: 0 auto;
+			display: block;
+		}
+		.slide_ul{
+			display: block;
+			margin:5px;
+		}
+		.slide_ul>li{
+			width:1000px;
+			height:600px;
+			position:absolute;
+			top:0;
+			left:0;
+			list-style:none;z-index:10;
+			display: block;
+		}
+		.slide_ul>li img{
+			width:1000px;
+			height:600px;
+		}
+		.slide li{
+			list-style: none;
+		}
+
+		.show{display:block;}
+		/* 하단 동그라미 버튼 CSS*/
+		.slide_btn>li{
+			float: left;
+			margin:0 5px 5px 0;
+		}
+		.slide_btn>li>a{
+			display:block;
+			width: 20px;
+			height:20px;
+			background: url(spr.png) -24px -125px;
+			text-indent: -999em;
+		}
+		.slide_btn>li>a.active{
+			background-position: 0 -126px;
+		}
+		.slide_btn{
+			z-index:100;
+			position:absolute;
+			right: 0;
+			bottom:0;
+		}
+		.slide_btn:after{
+			content:'';
+			display:block;
+			clear:both;
+		}
+		.slide_btn{
+			*zoom:1;
+		}
+		a{
+			color: black;
+			text-decoration: none;
+		}
+

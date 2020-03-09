@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IC-PC</title>
+	<!--외부 스타일 시트 / MainStyle.css-->
+	<link href="MainStyle2.css" rel="stylesheet" type="text/css">
+	<link href="commonStyle.css" rel="stylesheet" type="text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<!--font-->
+	<link href="https://fonts.googleapis.com/css?family=Jua|Nanum+Pen+Script|Ubuntu" rel="stylesheet">
+		<script>
+		//자바스크립트 오디오
+		var audio = new Audio('BGM.mp3');
+		audio.autoplay = true;
+		//이미지 슬라이드
+		/*
+		var myImage=document.getElementById("mainImage");
+		var imageArray=["찬양예배(이상호).jpg","선교부 단체사진(벚꽃).jpg","신환회.jpg"];
+		var imageIndex=0;
+
+		function changeImage(){
+			myImage.setAttribute("src",imageArray[imageIndex]);
+			imageIndex++;
+			if(imageIndex>=imageArray.length){
+				imageIndex=0;
+			}
+		}
+		setInterval(changeImage,1000);*/
+		//두번째 이미지 슬라이드
+		$(document).ready(function() {
+			var current=0;
+			var slide_length = $('.slide_ul>li').length;//이미지의 갯수를 변수로
+			var btn_ul = '<ul class="slide_btn"></ul>';//버튼 LIST 작성할 UL
+			$('.slide_ul>li').hide();//이미지 안보이게
+			$('.slide_ul>li').first().show();//이미지 하나만 보이게
+			
+			$(btn_ul).prependTo($('.slide'))//slide 클래스위에 생성
+			for (var i = 0 ; i < slide_length; i++){//동그라미 버튼 생성 이미지 li 개수 만큼
+				var child = '<li><a href="#none">'+i+'</a></li>';
+				$(child).appendTo($('.slide_btn'));
+			}
+			$('.slide_btn > li > a').first().addClass('active');	
+			$('.slide_btn > li > a').on('click' , slide_stop);
+			
+			//자동 슬라이드 함수
+			function autoplay(){
+				if(current == slide_length-1){
+				current = 0;
+			}else{
+				current++;
+			}
+				$('.slide_ul>li').stop().fadeOut(1500);
+				$('.slide_ul>li').eq(current).stop().fadeIn(1500);
+				$('.slide_btn > li > a').removeClass('active');	
+				$('.slide_btn > li > a').eq(current).addClass('active');	
+			}
+			setInterval(autoplay,3000);//반복
+
+			//버튼 클릭시 호출되는 함수
+			function slide_stop(){
+					var fade_idx = $(this).parent().index(); 
+					current = $(this).parent().index();//클릭한 버튼의 Index 를 받아서 그 다음 이미지부터 슬라이드 재생.
+					if($('.slide_ul > li:animated').length >= 1) return false; //버튼 반복 클릭시 딜레이 방지
+					$('.slide_ul > li').fadeOut(300);
+					$('.slide_ul > li').eq(fade_idx).fadeIn(300);
+					$('.slide_btn > li > a').removeClass('active');	
+					$(this).addClass('active');
+					
+				}	
+			}
+		);
+	</script>
+</head>
+<body>
+	<div id= "wrapper">
+		<header>  
+			<nav class="nav1">
+		</header>
+		<section class="slidemain">
+			<!--<img src="찬양예배(이상호).jpg" alt="YsjImage" style="width:1000px;height:500px;">-->
+			<!--<img src="선교부 단체사진(벚꽃).jpg" alt="선교부 단체사진" width="100%" height="500">-->
+			<div class="slide">
+				<ul class="slide_ul">
+					<li><a href="#"><img src="main_img_1.jpg" alt="메인사진1"></a></li>
+					<li><a href="#"><img src="main_img_2.jpg" alt="메인사진2"></a></li>
+					<li><a href="#"><img src="main_img_3.jpg" alt="메인사진3"></a></li>
+				</ul>
+			</div>
+		</section>
+
+		<br>
+	</div>
+</body>
+</html>
+

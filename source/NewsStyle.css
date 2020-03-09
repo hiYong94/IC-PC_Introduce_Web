@@ -1,0 +1,67 @@
+    section ul{
+        list-style-type: none;
+    }
+
+    footer li{
+        list-style-type: none;
+    }
+
+    section ul{
+        font-size: 40px;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        color: #BCBBBB;
+    }
+    section{
+        font-size: 35pt;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Black Han Sans', sans-serif;
+    }
+
+   #class{
+        background-image: url('성경.png');
+        background-size: 100%;
+        
+   }
+
+    span {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #gallery_section ul{
+        list-style-type: none;
+    }
+
+    #gallery_section ul .gallery li{
+        position: relative;
+        float: left;
+        display: block;
+        padding: 0px;
+        margin: 10px 0px 10px 30px;
+    }
+    #gallery_section img{
+        border-radius: 10px;
+    }
+    .gallery .what li{
+        position: relative;
+        float: left;
+        margin: 10px 0px 10px 30px;
+    }
+
+    #bible ul{
+        font-size: 25px;
+        text-align: left;
+        margin:  3px 3px 3px 3px;
+        padding: 3px;
+        color: #D3D2D2;
+        font-family: 'Nanum Pen Script', cursive;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
